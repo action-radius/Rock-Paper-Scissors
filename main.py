@@ -11,7 +11,18 @@ class MyRoot(BoxLayout):
         super(MyRoot, self).__init__()
 
     def generate_number(self):
-        self.random_label.text = str(random.randint(1, 1000))
+        self.random_numbers = str(random.randint(1, 4))
+        if self.random_numbers == "1":
+            self.random_label.text = "Rock"
+                    
+        if self.random_numbers == "2":
+            self.random_label.text = "Paper"
+                    
+        if self.random_numbers == "3":
+            self.random_label.text = "Well"
+
+        if self.random_numbers == "4":
+            self.random_label.text = "Scissors"
 
 class NeuralRandom(App):
     def build(self):

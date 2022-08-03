@@ -1,17 +1,48 @@
+# <MyRoot>:
+#     random_label: random_label
+#     BoxLayout:
+#         orientation: "vertical"
+#         Label:
+#             text: "NeuralRandom"
+#             font_size: 64
+#             color: 0.92, 0.45, 0 # All rgb colors divided by 255.
+#         Label:
+#             id: random_label
+#             text: "-"
+#             font_size: 64
+#         Button:
+#             text: "Generate"
+#             font_size: 32
+#             size: 100, 50
+#             on_press: root.generate_number()
 <MyRoot>:
     random_label: random_label
-    BoxLayout:
-        orientation: "vertical"
+    GridLayout:
+        rows: 3
+        cols: 2
+        padding: 10
+        spacing: 10
         Label:
-            text: "NeuralRandom"
-            font_size: 64
-            color: 0.92, 0.45, 0 # All rgb colors divided by 255.
+            text: "Rock, Paper, Well, Scissors"
+            font_size: 32
+            color: 0.92, 0.45, 0
         Label:
             id: random_label
             text: "-"
-            font_size: 64
-        Button:
-            text: "Generate"
             font_size: 32
-            size: 100, 50
+        Button:
+            text: "Rock"
+            font_size: 16
+            on_press: root.generate_number()
+        Button:
+            text: "Paper"
+            font_size: 16
+            on_press: root.generate_number()
+        Button:
+            text: "Well"
+            font_size: 16
+            on_press: root.generate_number()
+        Button:
+            text: "Scissors"
+            font_size: 16
             on_press: root.generate_number()
